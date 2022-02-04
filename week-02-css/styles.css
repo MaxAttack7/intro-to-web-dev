@@ -1,15 +1,20 @@
-/* Element selector that gives every p element a monospace font. */
-p {
-  font-family: monospace;
-}
+    body {
+                background-image: url("https://images6.alphacoders.com/341/341558.jpg");
 
-/* Class selector that gives elements with this class a big bold style. */
-.big {
-  font-size: large;
-  font-weight: bold;
-}
+             }
 
-/* ID selector that gives the element with this ID a red style. */
-#boldly {
-  color: red;
-}
+    h1 {
+      border: 4mm ridge rgba(0, 0, 0, .9);
+      border-style: dashed solid;
+      font-size: 36px;
+      background: content-box radial-gradient(skyblue, Blue);
+
+    }
+
+    p {
+border: 4mm ridge rgba(50, 50, 220, .6);
+background: cyan;
+font-size: 16px;
+font-family: Stencil Std, fantasy
+
+    }
