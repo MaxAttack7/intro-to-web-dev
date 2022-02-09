@@ -1,12 +1,95 @@
-nav {
-  border: thin solid black;
+nav
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 36px;
+text-align: center;
+background-color: lightblue;
 }
 
-div {
-  border: thin solid black;
-  margin: 25px 0;
+div
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
 }
 
-footer {
-  border: thin solid black;
+.container
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.container1
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.container2
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.mainheader
+{
+display: flex;
+grid-template-columns: 3.33fr 3.33fr 3.33fr;
+justify-content: space-around;
+font-size: 24px;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.underline
+{
+text-decoration: underline;
+}
+
+.header
+{
+grid-column: 1 / 4;
+font-size: 20px;
+}
+
+.footer
+{
+flex-grow: 2;
+}
+
+.Extension
+{
+flex-grow: 6;
+}
+
+footer
+{
+display: flex;
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+background-color: lightblue;
+flex-grow: 3;
+}
+
+img
+{
+border-radius: 8px;
+}
+
+body
+{
+background-image: url("https://cutewallpaper.org/21/wallpaper-for-website/Cool-Website-Background-Images-,-Best-Background-Images-,-HD-.jpg");
 }
