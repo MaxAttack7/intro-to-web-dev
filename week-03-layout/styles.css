@@ -67,12 +67,12 @@ font-size: 20px;
 
 .footer
 {
-flex-grow: 2;
+flex-grow: 3;
 }
 
 .Extension
 {
-flex-grow: 6;
+flex-basis: 1000px;
 }
 
 footer
@@ -92,4 +92,11 @@ border-radius: 8px;
 body
 {
 background-image: url("https://cutewallpaper.org/21/wallpaper-for-website/Cool-Website-Background-Images-,-Best-Background-Images-,-HD-.jpg");
+}
+
+@media screen and (max-width: 750px)
+{
+footer
+{
+display: none;
 }
