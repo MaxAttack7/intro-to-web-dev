@@ -2,7 +2,7 @@ nav
 {
 border: 2mm ridge rgba(0, 0, 220, .6);
 padding: 10px;
-font-size: 36px;
+font-size: 24;
 text-align: center;
 background-color: lightblue;
 }
@@ -11,6 +11,8 @@ div
 {
 border: 2mm ridge rgba(0, 0, 220, .6);
 padding: 10px;
+font-size: 24;
+text-align: center;
 }
 
 .container
