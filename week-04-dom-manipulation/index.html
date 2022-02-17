@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
   </head>
+
   <body>
     <div id="inputs">
       <div>Give me an adjective: <input id="adjective-one-input" /></div>
-      <button onclick="fillOutputs();">Done</button>
     </div>
+  <br>
+    <div id="inputs1">
+      <div>Give me an silly name: <input id="name-one-input" /></div>
+    </div>
+  <br>
+    <div id="inputs2">
+      <div>Give me an noun: <input id="noun-one-input" /></div>
+    </div>
+  <br>
+    <div id="inputs3">
+      <div>Give me an verb ending in "ing": <input id="verb-one-input" /></div>
+    </div>
+  <br>
+    <div id="inputs4">
+      <div>Give me an adverb: <input id="adverb-one-input" /></div>
+        <button onclick="fillOutputs();fillOutputs1();fillOutputs2();fillOutputs3();fillOutputs4();">Done</button>
+    </div>
+  <br>
     <div id="output">
-      The <span id="adjective-one-output"></span> fox jumped over the lazy dog.
+      It was a <span id="adjective-one-output"></span> Febuary evening as the clock struck midnight.
+      Suddenly I heard a howl from <span id="name-one-output"></span> the dog down the hall.
+      After investigating the situation, I realized he was completely covered in <span id="noun-one-output"></span>.
+      After I called the dog's name. He started <span id="verb-one-output"></span> through the house.
+      I said to myself <span id="adverb-one-output"></span> "Well this is going to be a rough night."
     </div>
+
   </body>
+
 </html>
