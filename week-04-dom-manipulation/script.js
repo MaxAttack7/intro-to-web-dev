@@ -1,20 +1,61 @@
+function fillOutputs()
+{
+const adjectiveOneInput = document.getElementById('adjective-one-input');
+const adjectiveOne = adjectiveOneInput.value;
 
-// When this function is called, it takes the values from the inputs and adds
-// them to the outputs.
-function fillOutputs() {
+const adjectiveOneOutput = document.getElementById('adjective-one-output');
+adjectiveOneOutput.innerText = adjectiveOne;
 
-  // Get the adjective input element
-  const adjectiveOneInput = document.getElementById('adjective-one-input');
-  // Get the text from the input element
-  const adjectiveOne = adjectiveOneInput.value;
-
-  // Get the adjective output element
-  const adjectiveOneOutput = document.getElementById('adjective-one-output');
-  // Set the text of the input element
-  adjectiveOneOutput.innerText = adjectiveOne;
-
-  // Get the output container element
-  const outputDiv = document.getElementById('output');
-  // Make the output container element visible
-  outputDiv.style.display = 'block';
+const outputDiv = document.getElementById('output');
+outputDiv.style.display = 'block';
 }
+
+function fillOutputs1()
+{
+const nameOneInput = document.getElementById('name-one-input');
+const nameOne = nameOneInput.value;
+
+const nameOneOutput = document.getElementById('name-one-output');
+nameOneOutput.innerText = nameOne;
+
+const outputDiv = document.getElementById('output');
+outputDiv.style.display = 'block';
+}
+
+function fillOutputs2()
+{
+const nounOneInput = document.getElementById('noun-one-input');
+const nounOne = nounOneInput.value;
+
+const nounOneOutput = document.getElementById('noun-one-output');
+nounOneOutput.innerText = nounOne;
+
+const outputDiv = document.getElementById('output');
+outputDiv.style.display = 'block';
+}
+
+function fillOutputs3()
+{
+const verbOneInput = document.getElementById('verb-one-input');
+const verbOne = verbOneInput.value;
+
+const verbOneOutput = document.getElementById('verb-one-output');
+verbOneOutput.innerText = verbOne;
+
+const outputDiv = document.getElementById('output');
+outputDiv.style.display = 'block';
+}
+
+function fillOutputs4()
+{
+const adverbOneInput = document.getElementById('adverb-one-input');
+const adverbOne = adverbOneInput.value;
+
+const adverbOneOutput = document.getElementById('adverb-one-output');
+adverbOneOutput.innerText = adverbOne;
+
+const outputDiv = document.getElementById('output');
+outputDiv.style.display = 'block';
+}
+
+alert('Welcome to my code! Please follow the instructions given!');
