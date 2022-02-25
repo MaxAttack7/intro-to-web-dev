@@ -1,49 +1,92 @@
-// When this function is called, it takes the user's answer to the first
-// question and uses if statements to check whether it's correct.
+
 function submitAnswerOne() {
-  // Get answer one's input element
-  const answerOneInput = document.getElementById('answer-one-input');
-  // Get the text from answer one's input element
-  const answerOne = answerOneInput.value;
-
-  if(answerOne == 'cat') {
-    alert("That's right!");
-    hide('question-one');
-    show('question-two');
-  } else if(answerOne == 'dog') {
-    alert('Close, but my favorite animal runs away from dogs.');
-  } else {
-    alert('Wrong! Hint: My favorite animal meows.')
-  }
+const answerOneInput = document.getElementById('answer-one-input');
+const answerOne = answerOneInput.value;
+if(answerOne == 'Intro to Internet Programing') {
+alert("That's right!");
+hide('question-one');
+show('question-two');
+}
+else if(answerOne == 'Intro To Internet Programing') {
+alert('Close! All words capitalized except "to"');
+}
+else {
+alert('Wrong! Hint: Check D2L!')
+}
 }
 
-// When this function is called, it takes the user's answer to the second
-// question and uses if statements to check whether it's correct.
-function submitAnswerTwo() {
-  // Get answer two's input element
-  const answerTwoInput = document.getElementById('answer-two-input');
-  // Get the number from answer two's input element
-  const answerTwo = answerTwoInput.value;
+function submitAnswerTwo(){
+const answerTwoInput = document.getElementById('answer-two-input');
+const answerTwo = answerTwoInput.value;
 
-  if(answerTwo == 42) {
-    alert("That's right!");
-    hide('question-two');
-    show('done');
-  } else if(answerTwo < 42) {
-    alert('The answer is higher.');
-  } else {
-    alert('The answer is lower.')
-  }
+if(answerTwo == 121) {
+alert("That's right!");
+hide('question-two');
+show('question-three');
+}
+else if(answerTwo < 121) {
+alert('The answer is higher.');
+}
+else {
+alert('The answer is lower.')
+}
 }
 
-// Helper function that takes an ID and shows the element with that ID.
-function show(id) {
-  const element = document.getElementById(id);
-  element.style.display = 'block';
+function submitAnswerThree(){
+const answerThreeInput = document.getElementById('answer-three-input');
+const answerThree = answerThreeInput.value;
+
+if(answerThree == 'Friday') {
+alert("That's right!");
+hide('question-three');
+show('question-four');
+}
+else if(answerThree == 'Thursday') {
+alert('Hint: Later in the Week');
+}
+else if(answerThree == 'Wednesday') {
+alert('Hint: Later in the Week');
+}
+else if(answerThree == 'Tuesday') {
+alert('Hint: Later in the Week');
+}
+else if(answerThree == 'Monday') {
+alert('Hint: Later in the Week');
+}
+else if(answerThree == 'Sunday') {
+alert('Hint: Later in the Week');
+}
+else if(answerThree == 'Saturday') {
+alert('Hint: Earlier in the week!');
+}
+else {
+alert('Wrong! Try Again')
+}
 }
 
-// Helper  function that takes an ID and hides the element with that ID.
+function submitAnswerFour(){
+const answerFourInput = document.getElementById('answer-four-input');
+const answerFour = answerFourInput.value;
+
+if(answerFour == 24) {
+alert("That's right!");
+hide('question-four');
+show('done');
+}
+else if(answerFour < 24) {
+alert('The answer is higher.');
+}
+else {
+alert('The answer is lower.')
+}
+}
+
+function show(id){
+const element = document.getElementById(id);
+element.style.display = 'block';
+}
+
 function hide(id) {
-  const element = document.getElementById(id);
-  element.style.display = 'none';
+const element = document.getElementById(id);
+element.style.display = 'none';
 }
