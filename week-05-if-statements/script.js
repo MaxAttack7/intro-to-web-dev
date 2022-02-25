@@ -1,4 +1,3 @@
-
 function submitAnswerOne() {
 const answerOneInput = document.getElementById('answer-one-input');
 const answerOne = answerOneInput.value;
