@@ -89,3 +89,4 @@ function hide(id) {
 const element = document.getElementById(id);
 element.style.display = 'none';
 }
+
