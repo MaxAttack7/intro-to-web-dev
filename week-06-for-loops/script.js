@@ -10,7 +10,6 @@ and grinding out every second in between.
 Every. Single. Day`;
 
 const speechPunctuationRemoved = speech.replace(',', '').replace('.', '');
-
 const wordsArray = speechPunctuationRemoved.split(/\s+/);
 
 
