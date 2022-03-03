@@ -1,30 +1,23 @@
-// Replace this speeh with your own.
-// Notice the `` backticks, which let you split your string into multiple lines.
-const speech = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.`;
+const speech = `Getting better isnt a hack or a trick
+or a one change that you need to make.
+Getting better is a campaign.
+Its a daily, weekly, an hourly fight.
+Against weakness, temptation, and laziness.
+Its a campaign of discipline. A campaign of
+hard work and dedication.
+Waking up early, going to bed late,
+and grinding out every second in between.
+Every. Single. Day`;
 
-// Remove punctuation from the speech. You might have to modify this if your
-// speech contains other punctuation.
 const speechPunctuationRemoved = speech.replace(',', '').replace('.', '');
 
-// Use a regular expression to split the speech into individual words. You
-// shouldn't need to change this, unless you want to split on characters other
-// than whitespace.
 const wordsArray = speechPunctuationRemoved.split(/\s+/);
 
-// Displays words that have more than 5 characters.
+
 function displayLongWords() {
   const longWordsElement = document.getElementById('long-words');
-
-  // Loop over every word in the array.
   for(let i = 0; i < wordsArray.length; i++) {
     const word = wordsArray[i];
-    // If the word has more than 5 characters, display it in the page.
     if(word.length > 5) {
       const wordElement = document.createElement('li');
       wordElement.innerText = word;
@@ -33,12 +26,76 @@ function displayLongWords() {
   }
 }
 
-// TODO: Define your own functions here!
+function displayShortWords() {
+  const shortWordsElement = document.getElementById('short-words');
+  for(let i = 0; i < wordsArray.length; i++) {
+    const word = wordsArray[i];
+    if(word.length < 4) {
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      shortWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+function displayThirdWords(){
+  const thirdWordsElement = document.getElementById('third-words');
+  for(let i = 2; i <= 300; i += 3){
+  const word = wordsArray[i];
+    if(word){
+    const wordElement = document.createElement('li');
+    wordElement.innerText = word;
+    thirdWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+function displayUncommonWords(){
+  let commonWords = ['the' , 'of' , 'and' , 'a' , 'to' , 'in' , 'is' , 'you' , 'that' , 'it' , ];
+
+  let uncommonWordsElement = document.getElementById('uncommon-words');
+  for(let word of wordsArray){
+    if(!commonWords.includes(word.toLowerCase())){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      uncommonWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+function displayLetterMWords(){
+  const letterWordsElement = document.getElementById('letter-words');
+
+  for(let word of wordsArray){
+    if(word.startsWith('m')){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      letterWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+function displayLongestWord() {
+  const longestWordElement = document.getElementById('longest-word');
+  let longestWord = wordsArray[0];
+  for (let i = 1; i < wordsArray.length; i++) {
+    if(wordsArray[i].length > longestWord.length) {
+      longestWord = wordsArray[i];
+      }
+    }
+    const wordElement = document.createElement('li');
+    wordElement.innerText = longestWord;
+    longestWordElement.appendChild(wordElement);
+}
 
 function displaySpeechStats() {
   document.getElementById('speech').innerText = speech;
 
   displayLongWords();
+  displayShortWords();
+  displayThirdWords();
+  displayUncommonWords();
+  displayLetterMWords();
+  displayLongestWord();
 
-  // TODO: Call your functions here!
 }
