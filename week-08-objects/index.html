@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task List</title>
+    <title>Best Workout Music Playlist</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
   </head>
   <body onload="loadContent();">
-    <h1>Task List</h1>
+    <h1>Workout Music Playlist</h1>
     <div id="table-container"></div>
     <hr>
-    <p>Shortest task: <span id="shortest-task"></span></p>
+    <p>Oldest Song Year Released: <span id="oldest-song"></span></p>
+    <p>Newest Song Year Released: <span id="newest-song"></span></p>
+    <p>Average Year of Songs Released: <span id="average-year"></span></p>
     <hr>
     <div>
-      <h1>New Task</h1>
-      Label: <input type="text" id="label-input"/>
+      <h1>New Song</h1>
+      Title: <input type="text" id="title-input"/>
       <br><br>
-      Time: <input type="number" id="time-input" />
+      Artist: <input type="text" id="artist-input" />
+      <br><br>
+      Year Released: <input type="number" id="year-input"/>
       <br><br>
       <button onclick="addNewTask();">Add</button>
     </div>
