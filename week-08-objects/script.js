@@ -1,49 +1,58 @@
-// Array of objects representing a todo list.
-// Modify this array to contain your own list.
+
 const taskArray = [
-  {label: 'Water plants', time: 3},
-  {label: 'Homework', time: 2},
-  {label: 'Laundry', time: 1},
+  {title: 'Breaking Through', artist: 'The Wreckage', year: 2011},
+  {title: 'Feed The Wolf', artist: 'Breaking Benjamin', year: 2018},
+  {title: 'Get Me Out', artist: 'No Resolve', year: 2012},
+  {title: 'Points Of Authority', artist: 'Linkin Park', year: 2000},
+  {title: 'Feel Invincible', artist: 'Skillet', year: 2016},
+  {title: 'Enough', artist: 'From Ashes To New', year: 2021},
+  {title: 'Animal I Have Become', artist: 'Three Days Grace', year: 2006},
+  {title: 'In The End', artist: 'Linkin Park', year: 2000},
+  {title: 'Nothing', artist: 'From Ashes To New', year: 2020},
+  {title: 'Dont Fall In Love', artist: 'The Wreckage', year: 2011},
+  {title: 'Monster', artist: 'Skillet', year: 2009},
+  {title: 'Disguise', artist: 'Motionless In White', year: 2019},
+  {title: 'The Resistance', artist: 'Skillet', year: 2016},
+  {title: 'Courtesy Call', artist: 'Thousand Foot Krutch', year: 2012},
+  {title: 'Painkiller', artist: 'Three Days Grace', year: 2015},
 ];
 
-// Loads the content into the page.
 function loadContent() {
-  // This line of code sorts the array alphabetically by the task labels.
-  // Modify this to sort your data by a different field, or just delete it.
-  taskArray.sort((a, b) => compare(a.label, b.label));
+  taskArray.sort((a, b) => compare(a.year, b.year));
 
   loadTable();
-  loadShortestTask();
+  loadOldestSong();
+  loadNewestSong();
+  loadAverage();
+
 }
 
-// Adds a task to the array and reloads the page content.
 function addNewTask() {
-  const newTaskLabel = document.getElementById('label-input').value;
-  const newTaskTime = document.getElementById('time-input').value;
-  const newTask = {label: newTaskLabel, time: newTaskTime };
+  const newTaskTitle = document.getElementById('title-input').value;
+  const newTaskArtist = document.getElementById('artist-input').value;
+  const newTaskYear = document.getElementById('year-input').value;
+  const newTask = {title: newTaskTitle, artist: newTaskArtist, year: newTaskYear};
   taskArray.push(newTask);
 
   loadContent();
 }
 
-// Iterates over the data array to create a table.
 function loadTable() {
   const tableElement = document.createElement('table');
-
-  // Create a header row.
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
-  headerRowElement.appendChild(createElement('th', 'Label'));
-  headerRowElement.appendChild(createElement('th', 'Time'));
+  headerRowElement.appendChild(createElement('th', 'Title'));
+  headerRowElement.appendChild(createElement('th', 'Artist'));
+  headerRowElement.appendChild(createElement('th', 'Year Released'));
   tableElement.appendChild(headerRowElement);
 
-  // Iterate over the array and create a table row for each object.
   for (let i = 0; i < taskArray.length; i++) {
     const task = taskArray[i];
     const rowElement = document.createElement('tr');
     rowElement.appendChild(createElement('td', i));
-    rowElement.appendChild(createElement('td', task.label));
-    rowElement.appendChild(createElement('td', task.time));
+    rowElement.appendChild(createElement('td', task.title));
+    rowElement.appendChild(createElement('td', task.artist));
+    rowElement.appendChild(createElement('td', task.year));
     tableElement.appendChild(rowElement);
   }
 
@@ -52,42 +61,56 @@ function loadTable() {
   tableContainer.appendChild(tableElement);
 }
 
-// Displays the name of the shortest task.
-function loadShortestTask(){
-  // Assume the first task is shortest
-  let shortestTask = taskArray[0];
-
-  // Starting with the second task, look for a shorter task
-  for (let i = 1; i < taskArray.length; i++) {
+function loadOldestSong(){
+  let OldestSong = taskArray[0];
+  for (let i = 0; i < taskArray.length; i++) {
     const task = taskArray[i];
-    // If this task is shorter than the previous shortest, it's now the shortest
-    if(task.time < shortestTask.time) {
-      shortestTask = task;
+    if(task.year < OldestSong.year) {
+      OldestSong = task;
     }
   }
-  document.getElementById('shortest-task').innerText = shortestTask.label;
+  document.getElementById('oldest-song').innerText = OldestSong.year;
 }
 
-// Helper function that creates an element that contains text content.
+
+function loadNewestSong(){
+  let NewestSong = taskArray[0];
+  for (let i = 0; i > taskArray.length; i++) {
+    const task = taskArray[i];
+    if(task.year > NewestSong.year) {
+      NewestSong = task;
+    }
+  }
+  document.getElementById('newest-song').innerText = NewestSong.year;
+}
+
+function loadAverage(){
+  let total = 0;
+ for(let i = 0; i < taskArray.length; i++){
+    console.log (total)
+   const song = taskArray[i];
+    total += Number(song.year);
+
+ }
+  let average = total / taskArray.length;
+  console.log (average);
+  document.getElementById('average-year').innerText = average
+  }
+
 function createElement(tag, text) {
   const element = document.createElement(tag);
   element.innerText = text;
   return element;
 }
 
-// Helper function that compares two values.
-// Works on strings, numbers, and dates.
 function compare(valueOne, valueTwo) {
-  // valueOne comes before valueTwo
-  if (valueOne < valueTwo) {
+  if (valueOne > valueTwo) {
     return -1;
   }
 
-  // valueOne comes after valueTwo
-  if (valueOne > valueTwo) {
+  if (valueOne < valueTwo) {
     return 1;
   }
 
-  // valueOne and valueTwo are equal
   return 0;
 }
