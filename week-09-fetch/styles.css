@@ -1,8 +1,40 @@
 #images {
-  width: 500px;
-  border: thin solid black;
+  width: 1852px;
+  border: 2mm ridge rgba(0, 0, 220, .6);
 }
 
 #images img {
   width: 100px;
+}
+
+h1
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 32;
+background-color: lightblue;
+text-align: center;
+}
+
+h2
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 32;
+background-color: lightblue;
+text-align: center;
+}
+
+div
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 24;
+background-color: lightblue;
+text-align: center;
+}
+
+body
+{
+background-image: url("https://cutewallpaper.org/21/wallpaper-for-website/Cool-Website-Background-Images-,-Best-Background-Images-,-HD-.jpg");
 }
