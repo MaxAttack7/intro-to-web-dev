@@ -1,1 +1,131 @@
+nav
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 64;
+text-align: center;
+background-color: lightblue;
+}
+
+div
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+font-size: 24px;
+text-align: center;
+}
+
+.mainheader
+{
+display: flex;
+grid-template-columns: 3.33fr 3.33fr 3.33fr;
+justify-content: space-around;
+font-size: 24px;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+body
+{
+background-image: url("https://cutewallpaper.org/21/wallpaper-for-website/Cool-Website-Background-Images-,-Best-Background-Images-,-HD-.jpg");
+}
+
+.container
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.container1
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.container2
+{
+display: grid;
+grid-template-columns: 2fr 8fr 2fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.container3
+{
+display: grid;
+grid-template-columns: 2fr 10fr;
+justify-content: space-around;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.mainheader
+{
+display: flex;
+grid-template-columns: 3.33fr 3.33fr 3.33fr;
+justify-content: space-around;
+font-size: 24px;
+text-align: center;
+gap: 10px;
+background-color: lightblue;
+}
+
+.underline
+{
+text-decoration: underline;
+}
+
+.header
+{
+grid-column: 1 / 4;
+font-size: 18px;
+}
+
+.footer
+{
+flex-grow: 3;
+}
+
+.Extension
+{
+flex-basis: 1000px;
+}
+
+footer
+{
+border: 2mm ridge rgba(0, 0, 220, .6);
+padding: 10px;
+background-color: lightblue;
+text-align: center;
+}
+
+img
+{
+border-radius: 8px;
+}
+
+.header1
+{
+font-size: 22px;
+grid-column: 1 / 4;
+}
+
+p
+{
+padding: 10px;
+font-size: 22px;
+text-align: center;
+}
 
